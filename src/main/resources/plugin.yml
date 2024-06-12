@@ -1,0 +1,12 @@
+name: WelcomeWave
+version: '${project.version}'
+main: me.betanow.welcomewave.WelcomeWave
+api-version: '1.16'
+author: Betanow
+description: WelcomeWave plugin allows player to welcome other players on the server. And then get a reward.
+commands:
+  welcome:
+    description: Welcome a player
+    usage: /welcome
+    permission: welcomewave.welcome
+    aliases: [ 'wlc', 'w', 'bienvenue', 'bvn', 'b' ]

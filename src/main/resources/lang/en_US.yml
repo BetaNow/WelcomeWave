@@ -1,0 +1,21 @@
+# =================================== #
+#                                     #
+#       English Translation File      #
+#           author: BetaNow           #
+#                                     #
+# =================================== #
+
+welcome-messages:
+  - "&aWelcome &r{player}&a to the server!"
+  - "&aThanks for joining us &r{player}&a!"
+  - "&aHi &r{player}&a!"
+  - "&aWelcome &r{player}&a!"
+  - "&aHi &r{player}&a! Welcome!"
+  - "&aWelcome &r{player}&a! Have fun!"
+  - "&aWelcome &r{player}&a! Good game!"
+
+first-join-message: "&aWelcome &r{player}&a to the &c&lPole&f&lBlocks &aserver!"
+no-permission: "&cYou do not have permission to execute this command."
+player-only: "&cYou must be a player to execute this command."
+no-body-wave: "&cThere is no one to wave to."
+new-player: "&f{player} &ais a new player! Welcome them by saying &f/welcome&a!"

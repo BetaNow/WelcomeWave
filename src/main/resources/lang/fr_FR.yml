@@ -1,0 +1,21 @@
+# =================================== #
+#                                     #
+#       French Translation File       #
+#           author: BetaNow           #
+#                                     #
+# =================================== #
+
+welcome-messages:
+  - "&aBienvenue &r{player}&a sur le serveur!"
+  - "&aMerci de nous rejoindre &r{player}&a!"
+  - "&aSalut &r{player}&a!"
+  - "&aBienvenue &r{player}&a!"
+  - "&aSalut &r{player}&a! Bienvenue!"
+  - "&aBienvenue &r{player}&a! Amuse-toi bien!"
+  - "&aBienvenue &r{player}&a! Bon jeu!"
+
+first-join-message: "&aBienvenue &r{player}&a sur le serveur &c&lPole&f&lBlocks!"
+no-permission: "&cVous n'avez pas la permission d'exécuter cette commande."
+player-only: "&cVous devez être un joueur pour exécuter cette commande."
+no-body-wave: "&cIl n'y a personne à saluer."
+new-player: "&f{player} &aest un nouveau joueur! Souhaitez-lui la bienvenue en lui disant &f/bienvenue&a!"

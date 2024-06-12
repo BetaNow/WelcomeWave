@@ -1,0 +1,18 @@
+# WelcomeWave plugin configuration file
+# Please don't change this
+version: 1.0
+
+# The language of the plugin: (en_US, fr_FR)
+language: "en_US"
+
+# Time of the wave in seconds
+wave-time: 10
+
+# Reward for the player that executes the command
+# type: ITEM, MONEY, COMMAND
+# value: The value of the reward (1 diamond, 1000 money, etc.)
+# amount: The amount of the reward (ONLY FOR ITEM)
+reward:
+  - "ITEM;DIAMOND;1"
+  - "MONEY;1000"
+  - "COMMAND;minecraft:give {player} minecraft:diamond 1"
