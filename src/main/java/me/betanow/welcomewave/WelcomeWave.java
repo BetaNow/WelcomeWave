@@ -1,5 +1,6 @@
 package me.betanow.welcomewave;
 
+import me.betanow.welcomewave.command.WWCommand;
 import me.betanow.welcomewave.command.WelcomeCommand;
 import me.betanow.welcomewave.listener.PlayerJoinListener;
 import net.milkbowl.vault.economy.Economy;
@@ -42,6 +43,7 @@ public final class WelcomeWave extends JavaPlugin {
         // Register the PlayerJoinListener
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(this, languageLoader), this);
         Objects.requireNonNull(getCommand("welcome")).setExecutor(new WelcomeCommand(this, languageLoader));
+        Objects.requireNonNull(getCommand("welcomewave")).setExecutor(new WWCommand(this, languageLoader));
     }
 
     /**
