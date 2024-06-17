@@ -3,7 +3,7 @@
 version: 1.0
 
 # The language of the plugin: (en_US, fr_FR)
-language: "en_US"
+lang: "en_US"
 
 # Time of the wave in seconds
 wave-time: 10

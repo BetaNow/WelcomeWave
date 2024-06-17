@@ -13,7 +13,7 @@ import java.util.Objects;
  * This class is responsible for loading and managing language files.
  *
  * @author BetaNow
- * @version 1.0.2
+ * @version 1.0.1
  */
 public class LanguageLoader {
 
@@ -52,6 +52,14 @@ public class LanguageLoader {
         loadLanguages();
     }
 
+    public static void reloadLanguages () {
+        // Clear all languages
+        LANGUAGES.clear();
+
+        // Load all languages
+        new LanguageLoader(WelcomeWave.getInstance());
+    }
+
     /**
      * Loads all language files.
      */
@@ -83,7 +91,7 @@ public class LanguageLoader {
      */
     private void saveDefaultLanguageFiles () {
         for (String language : SUPPORTED_LANGUAGES) {
-            plugin.saveResource("lang/" + language + ".yml", true);
+            plugin.saveResource("lang/" + language + ".yml", false);
             plugin.getLogger().info("Saved default language file: " + language);
         }
     }
@@ -105,7 +113,7 @@ public class LanguageLoader {
     /**
      * Gets the current language.
      *
-     * @param key  - The translation key
+     * @param key - The translation key
      * @return The current language
      */
     public String getString (String key) {
@@ -123,7 +131,7 @@ public class LanguageLoader {
     /**
      * Gets the prefixed translation.
      *
-     * @param key  - The translation key
+     * @param key - The translation key
      * @return The prefixed translation
      */
     public String getPrefixedString (String key) {

@@ -10,3 +10,13 @@ commands:
     usage: /welcome
     permission: welcomewave.welcome
     aliases: [ 'wlc', 'w', 'bienvenue', 'bvn', 'b' ]
+  welcomewave:
+    description: WelcomeWave plugin command
+    usage: /welcomewave
+    permission: welcomewave.admin
+    aliases: [ 'ww' ]
+    subcommands:
+      reload:
+        description: Reload the plugin configuration
+        usage: /welcomewave reload
+        permission: welcomewave.admin.reload

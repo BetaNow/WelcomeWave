@@ -25,8 +25,9 @@ Configure welcome messages and rewards according to your preferences in the conf
 `/welcomewave reload`: Reloads the plugin configuration.
 
 ## Permissions:
-* welcomewave.send: Allows players to send welcome messages.
-* welcomewave.reload: Allows players to reload the plugin configuration.
+* welcomewave.welcome: Allows players to send welcome messages.
+* welcomewave.admin: Allows players to access admin commands.
+  * welcomewave.admin.reload: Allows players to reload the plugin configuration.
 
 ## Contribution:
 If you encounter any issues or have suggestions for improvement, please report them on GitHub Issues.

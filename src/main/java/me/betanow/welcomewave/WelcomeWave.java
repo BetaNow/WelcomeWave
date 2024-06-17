@@ -33,7 +33,7 @@ public final class WelcomeWave extends JavaPlugin {
     public void onEnable () {
         saveDefaultConfig(); // Save the default config if it doesn't exist
         LanguageLoader languageLoader = new LanguageLoader(this); // Load the language files
-        if (!setupEconomy() ) {
+        if (!setupEconomy()) {
             getLogger().severe(String.format("[%s] - Disabled due to no Vault dependency found!", getDescription().getName()));
             getServer().getPluginManager().disablePlugin(this);
             return;
@@ -54,6 +54,7 @@ public final class WelcomeWave extends JavaPlugin {
 
     /**
      * Set up the economy
+     * Source: <a href="https://github.com/milkbowl/Vault">Vault Plugin Repo</a>
      *
      * @return true if the economy is set up, false otherwise
      */
@@ -81,6 +82,15 @@ public final class WelcomeWave extends JavaPlugin {
         // Remove the player after (configurable) seconds
         int waveTime = getConfig().getInt("wave-time");
         getServer().getScheduler().runTaskLater(this, ()->newPlayers.remove(player), waveTime * 20L);
+    }
+
+    /**
+     * Get the instance of the plugin
+     *
+     * @return the instance of the plugin
+     */
+    public static WelcomeWave getInstance () {
+        return getPlugin(WelcomeWave.class);
     }
 
     /**

@@ -60,6 +60,12 @@ public class WelcomeCommand implements CommandExecutor {
             return false;
         }
 
+        // Check if the player has the permission
+        if (!sender.hasPermission("welcomewave.welcome")) {
+            sender.sendMessage(languageLoader.getPrefixedString("no-permission"));
+            return false;
+        }
+
         // Check if there are new players
         if (plugin.getNewPlayers().isEmpty()) {
             sender.sendMessage(languageLoader.getPrefixedString("no-new-players"));
