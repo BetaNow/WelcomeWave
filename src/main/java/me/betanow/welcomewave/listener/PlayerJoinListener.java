@@ -1,6 +1,7 @@
 package me.betanow.welcomewave.listener;
 
 import me.betanow.welcomewave.LanguageLoader;
+import me.betanow.welcomewave.UpdateChecker;
 import me.betanow.welcomewave.WelcomeWave;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -50,6 +51,16 @@ public class PlayerJoinListener implements Listener {
             for (Player onlinePlayer : plugin.getServer().getOnlinePlayers()) {
                 onlinePlayer.sendMessage(languageLoader.getPrefixedString("new-player").replace("{player}", player.getName()));
             }
+        }
+
+        if (plugin.getConfig().getBoolean("check-for-updates") && player.isOp()) {
+            new UpdateChecker(plugin).getVersion(version -> {
+                if (!plugin.getDescription().getVersion().equals(version)) {
+                    player.sendMessage("There is a new update available.");
+                    player.sendMessage("Newest version: " + version + " (You are on version " + plugin.getDescription().getVersion() + ")");
+                    player.sendMessage("Get the latest version at: https://www.spigotmc.org/resources/welcomewave.117273/");
+                }
+            });
         }
     }
 

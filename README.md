@@ -33,6 +33,6 @@ Configure welcome messages and rewards according to your preferences in the conf
 If you encounter any issues or have suggestions for improvement, please report them on GitHub Issues.
 
 ## Support:
-For any questions or assistance, feel free to join our dedicated Discord server [Not accessible yet].  
+For any questions or assistance, feel free to join our dedicated Discord server: [BetaNow's Plugin Discord](https://discord.gg/TjNxKKjcKa)
 
 Made with ❤️ by [BetaNow] - Version 1.0.0

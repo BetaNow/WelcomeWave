@@ -40,6 +40,18 @@ public final class WelcomeWave extends JavaPlugin {
             return;
         }
 
+        getLogger().info("WelcomeWave enabled!");
+
+        // Check for updates
+        new UpdateChecker(this).getVersion(version -> {
+            if (this.getDescription().getVersion().equals(version)) {
+                getLogger().info("There is not a new update available.");
+            } else {
+                getLogger().info("There is a new update available.");
+                getLogger().info("Get the latest version at: https://www.spigotmc.org/resources/welcomewave.117273/");
+            }
+        });
+
         // Register the PlayerJoinListener
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(this, languageLoader), this);
         Objects.requireNonNull(getCommand("welcome")).setExecutor(new WelcomeCommand(this, languageLoader));

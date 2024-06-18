@@ -5,6 +5,9 @@ version: 1.0
 # The language of the plugin: (en_US, fr_FR)
 lang: "en_US"
 
+# Check for updates
+check-for-updates: true
+
 # Time of the wave in seconds
 wave-time: 10
 
